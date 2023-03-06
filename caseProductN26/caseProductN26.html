@@ -1,0 +1,23 @@
+<template>
+    <!-- Show the products on this page related to the contact of the case -->
+    
+    <!-- Take the country from the Home_Country__c field of Contact, and 
+        take the product from the lookup of Contact - display the products' information -->
+
+        <lightning-card title="Customers' Country Products">
+            <div class="slds-m-around_medium">
+        
+
+            <lightning-datatable key-field="Id" data={contactsproducts.data} columns={columns}>
+            </lightning-datatable>
+            </div>
+        </lightning-card>
+        <lightning-card title="Customer's Product Information">
+            <div class="slds-m-around_medium">
+            <lightning-datatable key-field="Id" data={customerproducts.data} columns={columns}>
+            </lightning-datatable>
+            </div>
+        </lightning-card>
+
+    
+</template>
